@@ -25,7 +25,7 @@ function App() {
     <NewNav />
     <Routes>
     
-      <Route path='/' element={<HomeMain />}></Route>
+      <Route path='/bigbusket_frontend' element={<HomeMain />}></Route>
       <Route path='/signup' element={<SignUp />}></Route>
       <Route path='/aboutproduct/:id' element={<AboutProduct />}></Route>
       <Route path="/basket" element={<Basket />}></Route>
