@@ -46,19 +46,19 @@ function HomeMain() {
     const token = localStorage.getItem('token');
     const apiLink = process.env.APILINK;
 
-    const { isLoading, serverError, apiData } = useFetch("/addproduct");
+    const { isLoading, serverError, apiData } = useFetch("https://bigbusket-api.onrender.com/addproduct");
 
     let newProductData = [];
     if (apiData) {
         newProductData = [...apiData];
         newProductData.splice(5);
     }
-console.log(apiLink);
+//console.log(apiLink);
     useEffect(() => {
         const fetchFun = async () => {
             //console.log("tu");
             //setIsLodar(true);
-            const response = await fetch("/basket", {
+            const response = await fetch("https://bigbusket-api.onrender.com/basket", {
                 method: "GET",
                 headers: { Authorization: localStorage.getItem("token") }
             });

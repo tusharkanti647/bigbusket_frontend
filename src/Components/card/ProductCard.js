@@ -62,7 +62,7 @@ function ProductCard({ product, basketQty }) {
     //useEffect(() => {
     const basketUpdate = async () => {
         setIsLodar(true);
-        const response = await fetch("/basket/" + id, {
+        const response = await fetch("https://bigbusket-api.onrender.com/basket/" + id, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",
@@ -102,7 +102,7 @@ function ProductCard({ product, basketQty }) {
         setIsBtnDisabled({...isBtnDisabled, addBtn: true, removeBtn: true});
         const hndelProductQuantity = async () => {
             //setIsLodar(true);
-            const response = await fetch("/basket-product/quantity-update", {
+            const response = await fetch("https://bigbusket-api.onrender.com/basket-product/quantity-update", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

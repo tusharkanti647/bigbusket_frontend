@@ -6,7 +6,7 @@ import RemoveIcon from '@mui/icons-material/Remove';
 import CloseIcon from '@mui/icons-material/Close';
 
 import { useEffect, useState } from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { isAddProductReducer } from "../../redux_toolkit/slices/functionSlices";
 import Lodar from "../lodar/Lodar";
 
@@ -24,7 +24,7 @@ function ItemList({ product, setBasketProductArr }) {
         const hndelProductQuantity = async () => {
             //setIsLodar(true);
             setIsBtnDisabled({...isBtnDisabled, addBtn:true, removeBtn:true});
-            const response = await fetch("/basket-product/quantity-update", {
+            const response = await fetch("https://bigbusket-api.onrender.com/basket-product/quantity-update", {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -47,7 +47,7 @@ function ItemList({ product, setBasketProductArr }) {
     //-----------------------------------------------------------------------------------------
     const remove1Product = async () => {
         setIsLodar(true);
-        const response = await fetch("/remove-product", {
+        const response = await fetch("https://bigbusket-api.onrender.com/remove-product", {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json",

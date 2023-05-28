@@ -33,7 +33,7 @@ function ProductPage() {
             const fatchFun = async () => {
                 setIsLodar(true);
                 setIsNextPagePresent(false);
-                let uid = "/products-search";
+                let uid = "https://bigbusket-api.onrender.com/products-search";
                 let querySearchString = "";
 
                 querySearchString = searchName ? querySearchString + "searchName=" + searchName : querySearchString;
@@ -101,7 +101,7 @@ function ProductPage() {
     useEffect(() => {
         const fetchFun = async () => {
             //setIsLodar(true);
-            const response = await fetch("/basket", {
+            const response = await fetch("https://bigbusket-api.onrender.com/basket", {
                 method: "GET",
                 headers: { Authorization: localStorage.getItem("token") }
             });

@@ -4,7 +4,7 @@ import "./Basket.css";
 
 
 import { Box, Button } from '@mui/material';
-import { border } from "@mui/system";
+//import { border } from "@mui/system";
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import ItemList from "./ItemList";
@@ -18,9 +18,9 @@ import { isAddProductReducer } from "../../redux_toolkit/slices/functionSlices";
 function Basket() {
 
     //get cart product list
-    const [cartItems, setCartItems] = useState([]);
+    //const [cartItems, setCartItems] = useState([]);
     const [totalPrice, setTotalPrice] = useState(0);
-    const [totalQuantity, setTotalQuantity] = useState(0);
+    //const [totalQuantity, setTotalQuantity] = useState(0);
     //const [totalSubtotal, setTotalSubtotal] = useState(0);
     const [totalSavings, setTotalSavings] = useState(0);
     const [basketProductArr, setBasketProductArr] = useState([]);
@@ -28,14 +28,14 @@ function Basket() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const basketProductArrReduxToolKit = useSelector((state) => state.basketProductArr);
+    //const basketProductArrReduxToolKit = useSelector((state) => state.basketProductArr);
 
     //fetch the basket data
     //--------------------------------------------------------------------------------------
     useEffect(() => {
         const fetchFun = async () => {
             setIsLodar(true);
-            const response = await fetch("/basket", {
+            const response = await fetch("https://bigbusket-api.onrender.com/basket", {
                 method: "GET",
                 headers: { Authorization: localStorage.getItem("token") }
             });
@@ -80,7 +80,7 @@ function Basket() {
     //----------------------------------------------------------------------------------------
     const removeAllItem = async () => {
         setIsLodar(true);
-        const respons = await fetch("/empty-basket", {
+        const respons = await fetch("https://bigbusket-api.onrender.com/empty-basket", {
             method: "PUT",
             headers: { "Authorization": localStorage.getItem("token") }
         });

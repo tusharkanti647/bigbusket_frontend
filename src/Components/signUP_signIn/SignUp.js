@@ -41,7 +41,7 @@ function SignUp() {
             const { name, number, email, password, conPassword } = signUpData;
 
             //console.log("hello");
-            const respons = await fetch("/signup", {
+            const respons = await fetch("https://bigbusket-api.onrender.com/signup", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ name, number, email, password, conPassword })

@@ -6,14 +6,14 @@ import { Routes, Route } from "react-router-dom";
 import SignUp from './Components/signUP_signIn/SignUp';
 import AboutProduct from './Components/productDetals/AboutProduct';
 import Basket from './Components/basket/Basket';
-import ProductPage from './Components/products/ProductPage';
+//import ProductPage from './Components/products/ProductPage';
 import NewNav from './Components/header/NewNav';
 import MainProductPage from './Components/products/allProducts/MainProductPage';
 
-const style = {
+// const style = {
 
-  background: '#2E3B55'
-};
+//   background: '#2E3B55'
+// };
 
 function App() {
 
