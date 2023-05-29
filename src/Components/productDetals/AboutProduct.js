@@ -75,7 +75,7 @@ function AboutProduct() {
         }
         fetchData();
     }, [id]);
-
+console.log(oneProductData)
     //check the product is present in the cart or not and set product qty
     //---------------------------------------------------------------------
     useEffect(() => {
@@ -153,7 +153,7 @@ function AboutProduct() {
     //off calculating
     //------------------------------------------------------------------------------------------------------
     let off = 0;
-    if (oneProductData.price) {
+    if (oneProductData.originalPrice) {
         off = ((oneProductData.originalPrice - oneProductData.discountPrice) / oneProductData.originalPrice) * 100;
         off=off.toFixed(2);
     }
@@ -167,16 +167,16 @@ function AboutProduct() {
     // }
 
 
-    if(isLodar){
-        return(
-            <Lodar />
-        )
-    }
+    // if(isLodar){
+    //     return(
+    //         <Lodar />
+    //     )
+    // }
     return (
 
         <Box sx={{ display: "flex", flexDirection: "column", justifyContent: 'center', alignItems: "center" }} className="About-product-main">
             <Box sx={{ width: "95%", display: "flex" }} className="upperPart">
-
+            
                 <Box sx={{ width: "25%", borderRight: "solid 0.5px #888888", color: "#888888" }} className="sidebar-category">
                     <Box>
                         <h4> Category</h4>
@@ -204,17 +204,18 @@ function AboutProduct() {
 
                 {/* ---------------------------------------------------------------------------- */}
                 <img src={oneProductData.imgLink} alt="" />
+                
 
                 {/* ------------------------------+ ", "+ oneProductData.about.weight}---------------------------------------------- */}
-                {oneProductData.price && (
+                {oneProductData.originalPrice && (
                     <Box className="upperPart-right" sx={{ ml: "20px" }}>
                         <p>Fresho</p>
                         <h4>{oneProductData.titel}</h4>
 
                         <Box>
 
-                            <p>MRP:{oneProductData.price[0]}</p>
-                            <h4 id="price">Price:Rs {oneProductData.price[1]} <span>({oneProductData.about.weight.length === 3 ? ((oneProductData.price[1] / oneProductData.about.pcs) + "/pcs") : ((oneProductData.price[1] / oneProductData.about.weight[1]) + "/" + oneProductData.about.weight[0])})</span></h4>
+                            <p><del>MRP:{oneProductData.originalPrice}</del></p>
+                            <h4 id="price">Price:Rs {oneProductData.discountPrice} <span>({oneProductData.about.weight.length === 3 ? ((oneProductData.discountPrice / oneProductData.about.pcs) + "/pcs") : ((oneProductData.discountPrice / oneProductData.about.weight[1]) + "/" + oneProductData.about.weight[0])})</span></h4>
                             <p><span>You Save:{off}%</span> <br />
                                 (Inclusive of all taxes)
                             </p>
