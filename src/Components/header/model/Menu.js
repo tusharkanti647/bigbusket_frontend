@@ -36,7 +36,7 @@ export default function Menu({ isLogIn }) {
     const handelSignOut = () => {
         localStorage.removeItem("token");
         handleClose();
-        navigate("/");
+        navigate("/bigbusket_frontend");
         window.location.reload();
     }
 
@@ -68,7 +68,7 @@ export default function Menu({ isLogIn }) {
                     <p id="parent-modal-description">
                     Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
                     </p> */}
-                    <Link to="/" onClick={handleClose}>
+                    <Link to="/bigbusket_frontend" onClick={handleClose}>
                         <div>Home</div>
                     </Link>
                     {isLogIn ? <div onClick={handelSignOut}>SignOut</div> : <SignIn />}

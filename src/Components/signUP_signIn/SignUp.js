@@ -57,7 +57,7 @@ function SignUp() {
                 localStorage.setItem("token", data.token);
 
                 //navigate to the home page
-                navigate("/");
+                navigate("/bigbusket_frontend");
                 window.location.reload();
 
                 setSignUpData({
