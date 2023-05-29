@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/bigbusket_frontend/static/css/main.d7c68ab7.css",
-    "main.js": "/bigbusket_frontend/static/js/main.8ad29b3a.js",
+    "main.js": "/bigbusket_frontend/static/js/main.d70e3ba6.js",
     "static/media/protein.webp": "/bigbusket_frontend/static/media/protein.7fec885470c2769ab75a.webp",
     "static/media/upTo50.webp": "/bigbusket_frontend/static/media/upTo50.eca15a5bbb06e35f7eef.webp",
     "static/media/induslnd.jpg": "/bigbusket_frontend/static/media/induslnd.bea3d1033400e03afb80.jpg",
@@ -20,10 +20,10 @@
     "static/media/ayurveda.webp": "/bigbusket_frontend/static/media/ayurveda.730c0c2d0f8dca43c489.webp",
     "index.html": "/bigbusket_frontend/index.html",
     "main.d7c68ab7.css.map": "/bigbusket_frontend/static/css/main.d7c68ab7.css.map",
-    "main.8ad29b3a.js.map": "/bigbusket_frontend/static/js/main.8ad29b3a.js.map"
+    "main.d70e3ba6.js.map": "/bigbusket_frontend/static/js/main.d70e3ba6.js.map"
   },
   "entrypoints": [
     "static/css/main.d7c68ab7.css",
-    "static/js/main.8ad29b3a.js"
+    "static/js/main.d70e3ba6.js"
   ]
 }
